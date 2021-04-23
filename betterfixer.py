@@ -32,24 +32,24 @@ glob_reg = get_reg('VersionInfoGlobal')
 if sea_reg != None:
     reg_json = json.loads(get_reg('VersionInfoSEA').decode('utf-8'))
     print(reg_json['game_info']['version'])
-    if reg_json['game_info']['version'] == '4.6.0_5e42365a0db':
+    if reg_json['game_info']['version'] == '4.7.0_ae263d77d6c':
         print("All good!")
     else:
         print("Better launcher has wrong version!")
         print("Fixing...")
-        reg_json['game_info']['version'] = '4.6.0_5e42365a0db'
+        reg_json['game_info']['version'] = '4.7.0_ae263d77d6c'
         fixed_json = json.dumps(reg_json,separators=(',', ':')).encode('utf-8')
         print(fixed_json)
         set_reg('VersionInfoSEA',fixed_json)
 if glob_reg != None:
     reg_json = json.loads(get_reg('VersionInfoGlobal').decode('utf-8'))
     print(reg_json['game_info']['version'])
-    if reg_json['game_info']['version'] == '4.6.0_5e42365a0db':
+    if reg_json['game_info']['version'] == '4.7.0_ae263d77d6c':
         print("All good!")
     else:
         print("Better launcher has wrong version!")
         print("Fixing...")
-        reg_json['game_info']['version'] = '4.6.0_5e42365a0db'
+        reg_json['game_info']['version'] = '4.7.0_ae263d77d6c'
         fixed_json = json.dumps(reg_json,separators=(',', ':')).encode('utf-8')
         print(fixed_json)
         set_reg('VersionInfoGlobal',fixed_json)            
